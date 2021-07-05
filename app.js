@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost/ON_Vacc_DB', { useUnifiedTopology: true, u
 var userController = require('./controllers/userController')
 
 
-
+app.get('/',userController.logout);
 app.post('/adminUpdateVacStatus', userController.adminUpdateVacStatus);
 app.get('/vaccStatusReport',userController.vaccStatusReport);//only to see in chrome
 app.post('/addVaccRegInfo',userController.createVaccReg);
